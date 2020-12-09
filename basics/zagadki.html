@@ -5,16 +5,14 @@
 	var question2 = "Этот плод едва обнимешь, если слаб, то не поднимешь,\nНа куски его порежь, мякоть красную поешь.";
 	var question3 = "Этот фрукт на вкус хорош\nИ на лампочку похож.";
 	var rightAnswer1 = "лук";
-	var altRightAnswer1 = "Лук";
 	var rightAnswer2 = "арбуз";
-	var altRightAnswer2 = "Арбуз";
 	var rightAnswer3 = "груша";
-	var altRightAnswer3 = "Груша";
 	var i = 0; // счетчик правильных ответов
 
 	var userAnswer = prompt(question1);
+	userAnswer = userAnswer.toLowerCase();
 
-	if(rightAnswer1 == userAnswer || altRightAnswer1 == userAnswer){
+	if(rightAnswer1 == userAnswer){
 		alert("Поздравляем, это правильный ответ!");
 		i += 1;
 	} else {
@@ -22,8 +20,9 @@
 	}
 
 	userAnswer = prompt(question2);
+	userAnswer = userAnswer.toLowerCase();
 
-	if(rightAnswer2 == userAnswer || altRightAnswer2 == userAnswer){
+	if(rightAnswer2 == userAnswer){
 		alert("Поздравляем, это правильный ответ!");
 		i += 1;
 	} else {
@@ -31,8 +30,9 @@
 	}
 
 	userAnswer = prompt(question3);
+	userAnswer = userAnswer.toLowerCase();
 
-	if(rightAnswer3 == userAnswer || altRightAnswer3 == userAnswer){
+	if(rightAnswer3 == userAnswer){
 		alert("Поздравляем, это правильный ответ!");
 		i += 1;
 	} else {
