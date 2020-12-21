@@ -1,44 +1,33 @@
 <meta charset="utf-8">
 <script type="text/javascript">
 	
-	var question1 = "Кто его раздевает, тот слезы проливает.";
-	var question2 = "Этот плод едва обнимешь, если слаб, то не поднимешь,\nНа куски его порежь, мякоть красную поешь.";
-	var question3 = "Этот фрукт на вкус хорош\nИ на лампочку похож.";
-	var rightAnswer1 = "лук";
-	var rightAnswer2 = "арбуз";
-	var rightAnswer3 = "груша";
+	function questioning(question) {
+
+		var userAnswer = prompt(questionArray[question][0]);
+		userAnswer = userAnswer.toLowerCase();
+
+		if(userAnswer == questionArray[question][1] || userAnswer == questionArray[question][2]){
+			alert("Поздравляем, это правильный ответ!");
+			i += 1;
+		} else {
+			alert("Это неправильный ответ.");
+		}
+	}
+
+	var questionArray = [
+		["Кто его раздевает, тот слезы проливает.", "лук", "лучок"],
+		["Этот плод едва обнимешь, если слаб, то не поднимешь,\nНа куски его порежь, мякоть красную поешь.", "арбуз"],
+		["Этот фрукт на вкус хорош\nИ на лампочку похож.", "груша"]
+	];
+
 	var i = 0; // счетчик правильных ответов
+	var n = 1 // номер вопроса
 
-	var userAnswer = prompt(question1);
-	userAnswer = userAnswer.toLowerCase();
-
-	if(rightAnswer1 == userAnswer){
-		alert("Поздравляем, это правильный ответ!");
-		i += 1;
-	} else {
-		alert("Это неправильный ответ.");
+	while(n <= questionArray.length){
+		questioning(n - 1);
+		n += 1;
 	}
-
-	userAnswer = prompt(question2);
-	userAnswer = userAnswer.toLowerCase();
-
-	if(rightAnswer2 == userAnswer){
-		alert("Поздравляем, это правильный ответ!");
-		i += 1;
-	} else {
-		alert("Это неправильный ответ.");
-	}
-
-	userAnswer = prompt(question3);
-	userAnswer = userAnswer.toLowerCase();
-
-	if(rightAnswer3 == userAnswer){
-		alert("Поздравляем, это правильный ответ!");
-		i += 1;
-	} else {
-		alert("Это неправильный ответ.");
-	}
-
+	
 	alert("У вас " + i + " правильных ответов.");
 
 </script>
